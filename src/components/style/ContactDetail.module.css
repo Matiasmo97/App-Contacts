@@ -8,16 +8,18 @@
   background-color: rgb(253, 235, 213);
   max-width: 700px;
 }
-label {
+.label {
   font-weight: bold;
+  padding-right: 0.5rem;
 }
 .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.2rem;
   padding-bottom: 0.8rem;
 }
-/* .img_fav {
-  
-} */
+
 button {
  
   border: none;

@@ -5,7 +5,7 @@ import Friends2 from "../img/Friends2.gif"
 function Home() {
   return (
     <div className={style.conteiner}>
-      <h3>Bienvenido a Contact</h3>
+      <h3>Welcome to Contacts</h3>
       <img src={Friends2} alt="Friends2" width={300}/>
     </div>
   );

@@ -1,5 +1,4 @@
 .container {
-  margin-top: 3rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin: 1.5rem;
@@ -11,20 +10,23 @@
 }
 
 .li {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .links {
-    text-decoration: none;
+  text-decoration: none;
 }
 .img {
-    padding-top: 4rem;
+  padding-top: 4rem;
 }
-
+.h2 {
+  padding-right: 3rem;
+  font-weight: bolder;
+}
 
 /* ===== MEDIA QUERIES=====*/
 @media screen and (min-width: 750px) {
-    .container {
-        margin-left: auto;
-        margin-right: auto;
-    }
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

@@ -55,30 +55,30 @@ function AddContact({ addContact }) {
 
   return (
     <div className={style.content}>
-      <h3>Añadir Información</h3>
+      <h3>Add Information</h3>
       <form onSubmit={handleSumit}>
         <FormItem
-          label="Nombre"
+          label="Name"
           name="name"
           value={fromData.name}
           handleChange={handleChange}
           error={errors.name}
         />
         <FormItem
-          label="Apellido"
+          label="Surname"
           name="surname"
           value={fromData.surname}
           handleChange={handleChange}
           error={errors.surname}
         />
         <FormItem
-          label="Telefono"
+          label="Phone"
           name="phone"
           value={fromData.phone}
           handleChange={handleChange}
           error={errors.phone}
         />
-        <input className={style.button} type="submit" value="Guardar" />
+        <input className={style.button} type="submit" value="Save" />
       </form>
       <div>
         <img src={Friends} alt="Friends" width={300} />

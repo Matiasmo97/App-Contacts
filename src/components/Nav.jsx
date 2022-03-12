@@ -6,26 +6,22 @@ import style from "./style/Nav.module.css";
 
 function Nav() {
   return (
-    <nav>
-      <div>
-        {/* <img src={Logo} alt="Logo" width={30} /> */}
-        <NavLink  className={style.title_app} to={"/"}>
+    <nav className={style.nav}>
+      <div className={style.title__app}>
+        <NavLink  className={style.title__link} to={"/"}>
         App Contacts
         </NavLink>
       </div>
       <div className={style.content_title}>
         <NavLink className={style.title} to="/contacts" exact>
-          Contactos
+          Contacts
         </NavLink>
         <NavLink className={style.title} to="/favoritos" exact>
-          Favoritos
+          Favorites
         </NavLink>
         <NavLink className={style.title} to="/add-contact" exact>
-          Agregar
+          Add Contact
         </NavLink>
-        {/* <div>
-          <img src={Friends} alt="Friends" width={300} />
-        </div> */}
       </div>
     </nav>
   );

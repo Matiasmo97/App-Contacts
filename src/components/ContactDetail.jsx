@@ -10,24 +10,24 @@ function ContactDetail({ contactos, removeContac, addFav, removeFav, push }) {
     <div className={style.conteiner}>
       {contactos ? (
         <>
-            <h1>Información</h1>
+            <h1>Information</h1>
           <div className={style.info}>
-            <label>Nombre: </label>
+            <label className={style.label} >Name: </label>
             <span>{contactos.name}</span>
           </div>
           <div className={style.info}>
-            <label>Apellido: </label>
+            <label className={style.label} >Surname: </label>
             <span>{contactos.surname}</span>
           </div>
           <div className={style.info}>
-            <label>Telefono: </label>
+            <label className={style.label} >Phone: </label>
             <span>{contactos.phone}</span>
           </div>
           {contactos.fav ? (
             <div className={style.info}>
-              <img className={style.img_fav}  src={Fav} alt="Favorito" width={30}/>
-              <label>Favorito: </label>
-              <span>{contactos.fav && "Contacto Favorito"}</span>
+              <img className={style.img_fav}  src={Fav} alt="Favorites" width={28}/>
+              <label className={style.label} >Favorite: </label>
+              <span>{contactos.fav && "Favorite Contact"}</span>
             </div>
           ) : (
             ""
@@ -37,19 +37,19 @@ function ContactDetail({ contactos, removeContac, addFav, removeFav, push }) {
               removeContac(contactos.id)
               push("/contacts")
             }}>
-              Eliminar
+              Delete
             </button>
             <button
               onClick={() =>
                 contactos.fav ? removeFav(contactos.id) : addFav(contactos.id)
               }
             >
-              {contactos.fav ? "Remover de Favoritos" : "Agregar a Favoritos"}
+              {contactos.fav ? "Remove from Favorites" : "Add to Favorites"}
             </button>
           </div>
         </>
       ) : (
-        <h1>No hay contactos</h1>
+        <h1>No Contacts</h1>
       )}
     </div>
   );
