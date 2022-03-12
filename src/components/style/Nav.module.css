@@ -1,6 +1,7 @@
 .title__app {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+ 
+  padding-top: 0.7rem;
+  padding-bottom: 0.6rem;
   width: 300px;
   margin-left: auto;
   margin-right: auto;
@@ -9,15 +10,19 @@
   background-color: rgba(253, 235, 213, 0.432);
 }
 .title__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
   color: rgb(88, 86, 86);
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 .content_title {
   padding-top: 3rem;
+  padding-bottom: 1rem;
 }
 .title {
   padding: 0.5rem;
@@ -28,4 +33,7 @@
   background-color: rgb(255, 132, 0);
   color: white;
   border-radius: 0.3rem;
+}
+.title:hover {
+  background-color: rgb(255, 94, 0);
 }

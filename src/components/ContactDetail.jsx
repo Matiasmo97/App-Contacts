@@ -3,10 +3,12 @@ import { connect } from "react-redux";
 import { removeContac, addFav, removeFav } from "../actions";
 import style from "./style/ContactDetail.module.css"
 import Fav from "../img/Fav.gif"
+import 'animate.css';
 
 //Hacemos un destructuring del 'contact' recibido del find aplicado en App.js
 function ContactDetail({ contactos, removeContac, addFav, removeFav, push }) {
   return (
+    <div className="animate__animated animate__fadeInUp">
     <div className={style.conteiner}>
       {contactos ? (
         <>
@@ -23,6 +25,7 @@ function ContactDetail({ contactos, removeContac, addFav, removeFav, push }) {
             <label className={style.label} >Phone: </label>
             <span>{contactos.phone}</span>
           </div>
+          <div className="animate__animated animate__fadeInUp">
           {contactos.fav ? (
             <div className={style.info}>
               <img className={style.img_fav}  src={Fav} alt="Favorites" width={28}/>
@@ -32,6 +35,7 @@ function ContactDetail({ contactos, removeContac, addFav, removeFav, push }) {
           ) : (
             ""
           )}
+          </div>
           <div>
             <button onClick={() => {
               removeContac(contactos.id)
@@ -51,6 +55,7 @@ function ContactDetail({ contactos, removeContac, addFav, removeFav, push }) {
       ) : (
         <h1>No Contacts</h1>
       )}
+    </div>
     </div>
   );
 }

@@ -3,9 +3,12 @@ import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
 import style from "./style/Contacts.module.css";
 import Contact from "../img/Contacts.gif";
+import 'animate.css';
+
 
 function Contacts({ contacts }) {
   return (
+    <div className="animate__animated animate__fadeInUp">
     <div className={style.container}>
       <div className={style.container__contacts}>
         <ul>
@@ -31,6 +34,7 @@ function Contacts({ contacts }) {
       <div>
         <img className={style.img} src={Contact} alt="Contact" width={300} />
       </div>
+    </div>
     </div>
   );
 }

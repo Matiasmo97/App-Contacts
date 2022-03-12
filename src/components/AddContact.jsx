@@ -3,12 +3,14 @@ import { connect } from "react-redux";
 import { addContact } from "../actions";
 import style from "./style/AddContact.module.css";
 import Friends from "../img/Friends.gif";
+import Swal from 'sweetalert2'
+
 
 function validate(data) {
   const errors = {};
-  if (!data.name) errors.name = "Debe ingresar un nombre";
-  if (!data.surname) errors.surname = "Debe ingresar un apellido";
-  if (!data.phone) errors.phone = "Debe ingresar un telefono";
+  if (!data.name) errors.name = "You must enter a name";
+  if (!data.surname) errors.surname = "You must enter a last name";
+  if (!data.phone) errors.phone = "You must enter a phone";
   return errors;
 }
 
@@ -36,6 +38,7 @@ function AddContact({ addContact }) {
       return state;
     });
   }
+
   // Creamos la funcion handleSumit para submitear la informacion al array de contactos
   function handleSumit(e) {
     // Usamos preventDefault para lograr que la pagina no se regargue
@@ -44,9 +47,14 @@ function AddContact({ addContact }) {
     e.preventDefault();
     // Usamos la funcion addContact para extraer el estado de la informacion de fromData
     // y se la pasamos al array de contactos
-    if (Object.values(errors).length > 0)
-      alert("Completa todos los campos requeridos");
-    else {
+    if (Object.values(errors).length > 0){
+      // 
+      Swal.fire({
+        icon: 'error',
+        title: 'Complete all required fields',
+        text: 'Something went wrong!',
+      })
+    } else {
       addContact(fromData.name, fromData.surname, fromData.phone);
       // Vaciamos los inputs
       setfromData({ name: "", surname: "", phone: "" });
@@ -54,6 +62,7 @@ function AddContact({ addContact }) {
   }
 
   return (
+    <div className="animate__animated animate__fadeInUp">
     <div className={style.content}>
       <h3>Add Information</h3>
       <form onSubmit={handleSumit}>
@@ -83,6 +92,8 @@ function AddContact({ addContact }) {
       <div>
         <img src={Friends} alt="Friends" width={300} />
       </div>
+    </div>
+
     </div>
   );
 }

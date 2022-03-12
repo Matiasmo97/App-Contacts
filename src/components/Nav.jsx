@@ -1,17 +1,20 @@
 import React from "react";
-// import Logo from "../img/Icon.png";
 import { NavLink } from "react-router-dom";
 import style from "./style/Nav.module.css";
-// import Friends from "../img/Friends.gif";
+import Logo from "../img/Logo.gif"
+import 'animate.css';
+
 
 function Nav() {
   return (
     <nav className={style.nav}>
       <div className={style.title__app}>
         <NavLink  className={style.title__link} to={"/"}>
-        App Contacts
+        <img src={Logo} alt="Logo" width={50} />
+        Contacts
         </NavLink>
       </div>
+      <div className="animate__animated animate__bounceInLeft">
       <div className={style.content_title}>
         <NavLink className={style.title} to="/contacts" exact>
           Contacts
@@ -22,6 +25,7 @@ function Nav() {
         <NavLink className={style.title} to="/add-contact" exact>
           Add Contact
         </NavLink>
+      </div>
       </div>
     </nav>
   );
