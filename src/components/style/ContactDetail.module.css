@@ -11,6 +11,14 @@
   font-weight: bold;
   padding-right: 0.5rem;
 }
+.information{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon__list {
+  padding-right: 0.5rem;
+}
 .info {
   display: flex;
   justify-content: center;

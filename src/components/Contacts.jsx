@@ -3,41 +3,40 @@ import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
 import style from "./style/Contacts.module.css";
 import Contact from "../img/Contacts.gif";
-import 'animate.css';
-
+import "animate.css";
 
 function Contacts({ contacts }) {
   return (
     <div className="animate__animated animate__fadeInUp">
-    <div className={style.container}>
+      <div className={style.container}>
+        <div>
+          <img className={style.img} src={Contact} alt="Contact" width={300} />
+        </div>
+      </div>
       <div className={style.container__contacts}>
         <ul>
           {/* Recorremos el array(contacts) con todos los contactos agregados */}
-          {contacts.length > 0
-            ? contacts.map((contact) => (
-                <div key={contact.id}>
-                  <NavLink
-                    className={style.links}
-                    to={`/contact/${contact.id}`}
-                  >
-                    <li
-                      className={style.li}
-                    >{`${contact.name} ${contact.surname}`}</li>
-                  </NavLink>
-                </div>
-              ))
-            : <div>
+          {contacts.length > 0 ? (
+            contacts.map((contact) => (
+              <div key={contact.id}>
+                <NavLink className={style.links} to={`/contact/${contact.id}`}>
+                  <li
+                    className={style.li}
+                  >{`${contact.name} ${contact.surname}`}</li>
+                </NavLink>
+              </div>
+            ))
+          ) : (
+            <div>
               <h2 className={style.h2}>You have no added contacts</h2>
-            </div>}
+            </div>
+          )}
         </ul>
       </div>
-      <div>
-        <img className={style.img} src={Contact} alt="Contact" width={300} />
-      </div>
-    </div>
     </div>
   );
 }
+
 //Nos traemos el estado del array de contactos
 function mapStateToProps(state) {
   return {

@@ -6,13 +6,6 @@ body {
   font-family: "Raleway", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(255, 132, 0);
-  background: linear-gradient(
-    22deg,
-    rgba(255, 132, 0, 1) 0%,
-    rgba(231, 8, 8, 1) 50%,
-    rgba(255, 132, 0, 1) 100%
-  );
   min-height: 850px;
   height: 100%;
 }
@@ -21,3 +14,5 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+

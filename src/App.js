@@ -7,6 +7,8 @@ import ContactDetail from "./components/ContactDetail";
 import { connect } from "react-redux";
 import Home from "./components/Home";
 import ContactsFav from "./components/ContactsFav";
+import Footer from "./components/Footer";
+
 
 function App({ contacts }) {
   return (
@@ -33,6 +35,7 @@ function App({ contacts }) {
           return <ContactDetail contactos={contactos} push={history.push} />;
         }}
       />
+      <Route  path={"/"}  component={Footer} />
     </div>
   );
 }

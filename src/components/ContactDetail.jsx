@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { removeContac, addFav, removeFav } from "../actions";
 import style from "./style/ContactDetail.module.css"
 import Fav from "../img/Fav.gif"
+import { BsCardList } from "react-icons/bs";
 import 'animate.css';
 
 //Hacemos un destructuring del 'contact' recibido del find aplicado en App.js
@@ -12,7 +13,7 @@ function ContactDetail({ contactos, removeContac, addFav, removeFav, push }) {
     <div className={style.conteiner}>
       {contactos ? (
         <>
-            <h1>Information</h1>
+             <h1 className={style.information}><BsCardList className={style.icon__list} /> Information</h1>
           <div className={style.info}>
             <label className={style.label} >Name: </label>
             <span>{contactos.name}</span>
