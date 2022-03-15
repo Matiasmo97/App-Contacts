@@ -34,7 +34,6 @@ function AddContact({ addContact }) {
       };
       const validations = validate(state);
       setErrors(validations);
-
       return state;
     });
   }
@@ -56,6 +55,12 @@ function AddContact({ addContact }) {
       })
     } else {
       addContact(fromData.name, fromData.surname, fromData.phone);
+      Swal.fire({
+        icon: 'success',
+        title: 'Your contact has been saved',
+        showConfirmButton: false,
+        timer: 1500
+      })
       // Vaciamos los inputs
       setfromData({ name: "", surname: "", phone: "" });
     }

@@ -4,10 +4,19 @@ import { removeContac, addFav, removeFav } from "../actions";
 import style from "./style/ContactDetail.module.css";
 import Fav from "../img/Fav.gif";
 import { BsCardList } from "react-icons/bs";
+import Swal from "sweetalert2";
 import "animate.css";
 
 //Hacemos un destructuring del 'contact' recibido del find aplicado en App.js
 function ContactDetail({ contactos, removeContac, addFav, removeFav, push }) {
+  const swalWithBootstrapButtons = Swal.mixin({
+    customClass: {
+      confirmButton: "btn btn-success",
+      cancelButton: "btn btn-danger",
+    },
+    buttonsStyling: false,
+  });
+
   return (
     <div className="animate__animated animate__fadeInUp">
       <div className={style.conteiner}>
@@ -47,8 +56,36 @@ function ContactDetail({ contactos, removeContac, addFav, removeFav, push }) {
             <div>
               <button
                 onClick={() => {
-                  removeContac(contactos.id);
-                  push("/contacts");
+                  swalWithBootstrapButtons
+                    .fire({
+                      title: "Are you sure?",
+                      text: "You won't be able to revert this!",
+                      icon: "warning",
+                      showCancelButton: true,
+                      confirmButtonText: "Yes, delete it!",
+                      cancelButtonText: "No, cancel!",
+                      reverseButtons: true,
+                    })
+                    .then((result) => {
+                      if (result.isConfirmed) {
+                        swalWithBootstrapButtons.fire(
+                          "Deleted!",
+                          "Your contact has been deleted.",
+                          "success"
+                        );
+                        removeContac(contactos.id);
+                        push("/contacts");
+                      } else if (
+                        /* Read more about handling dismissals below */
+                        result.dismiss === Swal.DismissReason.cancel
+                      ) {
+                        swalWithBootstrapButtons.fire(
+                          "Cancelled",
+                          "Your contact is safe :D",
+                          "error"
+                        );
+                      }
+                    });
                 }}
               >
                 Delete
