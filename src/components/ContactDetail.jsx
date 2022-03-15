@@ -3,8 +3,9 @@ import { connect } from "react-redux";
 import { removeContac, addFav, removeFav } from "../actions";
 import style from "./style/ContactDetail.module.css";
 import Fav from "../img/Fav.gif";
-// import { BsCardList } from "react-icons/bs";
 import Contact from "../img/Contact.png";
+import Phone from "../img/phone-call.png"
+import Email from "../img/mail.png"
 import Swal from "sweetalert2";
 import "animate.css";
 
@@ -32,8 +33,8 @@ function ContactDetail({ contactos, removeContac, addFav, removeFav, push }) {
               </h2>
             </div>
             <div className={style.contactarme}>
-            <a href={`mailto: ${contactos.email}`} >Contacto</a>
-            <a href={`tel: ${contactos.phone}`} >Lammar</a>
+            <a href={`tel: ${contactos.phone}`} ><img src={Phone} alt="Phone" width={30} /></a>
+            <a href={`mailto: ${contactos.email}`} ><img src={Email} alt="Email" width={30} /></a>
             </div>
             <div className={style.info}>
               <label className={style.label}>Phone: </label>
