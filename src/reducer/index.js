@@ -6,14 +6,13 @@ import {
 } from "../actions/types";
 
 const initialState = [];
-// let contactFav = [];
 let prevId = 0;
 
 export function reducer(state = initialState, { type, payload }) {
   switch (type) {
     case ADD_CONTACT: {
       //Retornamos un nuevo array con el estado previo
-      // Nos quedamos con el payload(name, surname, phone, fav)
+      // Nos quedamos con el payload(name, surname, phone, fav, email)
       // le agregamos 'id' inicialmente en 0
       return [...state, { ...payload, id: ++prevId }];
     }

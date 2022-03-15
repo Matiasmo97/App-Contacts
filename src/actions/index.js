@@ -1,8 +1,8 @@
 import { ADD_CONTACT, ADD_FAV, REMOVE_CONTACT, REMOVE_FAV } from './types'
 
 
-export function addContact(name, surname, phone){
-return {type: ADD_CONTACT, payload: {name, surname, phone, fav: false}}
+export function addContact(name, surname, phone, email){
+return {type: ADD_CONTACT, payload: {name, surname, phone, email, fav: false}}
 }
 
 export function removeContac(id){

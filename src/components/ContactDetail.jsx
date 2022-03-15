@@ -3,7 +3,8 @@ import { connect } from "react-redux";
 import { removeContac, addFav, removeFav } from "../actions";
 import style from "./style/ContactDetail.module.css";
 import Fav from "../img/Fav.gif";
-import { BsCardList } from "react-icons/bs";
+// import { BsCardList } from "react-icons/bs";
+import Contact from "../img/Contact.png";
 import Swal from "sweetalert2";
 import "animate.css";
 
@@ -17,25 +18,30 @@ function ContactDetail({ contactos, removeContac, addFav, removeFav, push }) {
     buttonsStyling: false,
   });
 
+  console.log(contactos);
   return (
     <div className="animate__animated animate__fadeInUp">
       <div className={style.conteiner}>
         {contactos ? (
           <>
-            <h1 className={style.information}>
-              <BsCardList className={style.icon__list} /> Information
-            </h1>
-            <div className={style.info}>
-              <label className={style.label}>Name: </label>
-              <span>{contactos.name}</span>
+            <div className={style.contact_img}>
+              <img src={Contact} alt="Contact" width={90} />
+              
+              <h2 className={style.contact__name}>
+                {contactos.name} {contactos.surname}
+              </h2>
             </div>
-            <div className={style.info}>
-              <label className={style.label}>Surname: </label>
-              <span>{contactos.surname}</span>
+            <div className={style.contactarme}>
+            <a href={`mailto: ${contactos.email}`} >Contacto</a>
+            <a href={`tel: ${contactos.phone}`} >Lammar</a>
             </div>
             <div className={style.info}>
               <label className={style.label}>Phone: </label>
               <span>{contactos.phone}</span>
+            </div>
+            <div className={style.info}>
+              <label className={style.label}>Email: </label>
+              <span>{contactos.email}</span>
             </div>
             <div className="animate__animated animate__fadeInUp">
               {contactos.fav ? (
@@ -100,7 +106,7 @@ function ContactDetail({ contactos, removeContac, addFav, removeFav, push }) {
             </div>
           </>
         ) : (
-          <h1>No Contacts</h1>
+          <h1 className={style.noContact}>No Contacts</h1>
         )}
       </div>
     </div>
