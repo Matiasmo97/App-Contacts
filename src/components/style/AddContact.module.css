@@ -1,27 +1,43 @@
 .content {
-  margin-top: 3rem;
+  margin-top: 8rem;
+  height: 550px;
+  border-radius: 18px;
+  box-shadow: 20px 20px 50px rgba(39, 39, 39, 0.5);
+  background-color: #504E4E;
+  max-width: 340px;
+  display: flex;
   padding-top: 1rem;
-  padding-bottom: 1rem;
-  margin: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 20px 20px 50px rgba(102, 102, 102, 0.5);
-  background-color: rgb(253, 235, 213);
-  max-width: 700px;
-}
-.input {
-  display: block;
-  min-width: 250px;
-  padding: 0.7rem;
+  align-items: center;
+  flex-direction: column;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 0.5rem;
-  border: 1.5px solid;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+}
+.input {
+  display: flex;
+  justify-content: start;
+  width: 275px;
+  padding: 0.6rem;
+  border-radius: 0.4rem;
+  border: none;
   outline: none;
   margin-bottom: 0.6rem;
   margin-top: 0.3rem;
+  background-color: rgba(194, 194, 194, 0.568);
+}
+.labels {
+  color: rgba(255, 255, 255, 0.849);
+  display: flex;
+  justify-content: start;
 }
 .error {
-  color: red;
+  color: rgba(244, 59, 59, 0.968);
   font-weight: bold;
 }
 .button {
@@ -33,14 +49,19 @@
   cursor: pointer;
   border-radius: 0.3rem;
   font-weight: bold;
-  color: aliceblue;
-  background: rgb(255, 132, 0);
+  color: rgba(240, 248, 255, 0.865);
+  background: #9F63FF;
+  width: 4rem;
 }
 
 /* ===== MEDIA QUERIES=====*/
-@media screen and (min-width: 750px) {
+@media screen and (max-width: 400px) {
     .content {
-        margin-left: auto;
-        margin-right: auto;
+        margin-top: 5rem;
+    }
+}
+@media screen and (max-width: 360px) {
+    .content {
+        margin-top: 3rem;
     }
 }

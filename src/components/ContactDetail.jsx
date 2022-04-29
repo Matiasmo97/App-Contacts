@@ -2,8 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { removeContac, addFav, removeFav } from "../actions";
 import style from "./style/ContactDetail.module.css";
-import Fav from "../img/Fav.gif";
-import Contact from "../img/Contact.png";
+import Contact from "../img/Contact.svg";
 import Phone from "../img/phone-call.png"
 import Email from "../img/mail.png"
 import Swal from "sweetalert2";
@@ -22,6 +21,7 @@ function ContactDetail({ contactos, removeContac, addFav, removeFav, push }) {
   console.log(contactos);
   return (
     <div className="animate__animated animate__fadeInUp">
+      <div style={{height: "100px"}}></div>
       <div className={style.conteiner}>
         {contactos ? (
           <>
@@ -33,8 +33,8 @@ function ContactDetail({ contactos, removeContac, addFav, removeFav, push }) {
               </h2>
             </div>
             <div className={style.contactarme}>
-            <a href={`tel: ${contactos.phone}`} ><img src={Phone} alt="Phone" width={30} /></a>
-            <a href={`mailto: ${contactos.email}`} ><img src={Email} alt="Email" width={30} /></a>
+            <a href={`tel: ${contactos.phone}`} ><img src={Phone} alt="Phone" width={40} /></a>
+            <a href={`mailto: ${contactos.email}`} ><img src={Email} alt="Email" width={40} /></a>
             </div>
             <div className={style.info}>
               <label className={style.label}>Phone: </label>
@@ -47,12 +47,6 @@ function ContactDetail({ contactos, removeContac, addFav, removeFav, push }) {
             <div className="animate__animated animate__fadeInUp">
               {contactos.fav ? (
                 <div className={style.info}>
-                  <img
-                    className={style.img_fav}
-                    src={Fav}
-                    alt="Favorites"
-                    width={28}
-                  />
                   <label className={style.label}>Favorite: </label>
                   <span>{contactos.fav && "Favorite Contact"}</span>
                 </div>

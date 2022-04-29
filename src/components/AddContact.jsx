@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { addContact } from "../actions";
 import style from "./style/AddContact.module.css";
-import Friends from "../img/Friends.gif";
+import Perfil from "../img/Perfil.png";
 import Swal from "sweetalert2";
 
 const emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
@@ -85,7 +85,7 @@ function AddContact({ addContact }) {
   return (
     <div className="animate__animated animate__fadeInUp">
       <div className={style.content}>
-        <h3>Add Information</h3>
+        <img src={Perfil} alt="Perfil" width={55} style={{marginBottom: "1rem"}} />
         <form onSubmit={handleSumit}>
           <FormItem
             label="Name"
@@ -117,9 +117,6 @@ function AddContact({ addContact }) {
           />
           <input className={style.button} type="submit" value="Save" />
         </form>
-        <div>
-          <img src={Friends} alt="Friends" width={300} />
-        </div>
       </div>
     </div>
   );
@@ -128,8 +125,8 @@ function AddContact({ addContact }) {
 // Y a la vez la hacemos reutilizable para otro componente
 function FormItem({ label, name, value, handleChange, error }) {
   return (
-    <div>
-      <label>{label}</label>
+    <div className={style.container}>
+      <label className={style.labels}>{label}</label>
       <input
         className={style.input}
         name={name}

@@ -10,17 +10,17 @@ function Footer() {
     <footer className={style.container}>
         <div className="animate__animated animate__bounceInLeft">
           <NavLink className={style.link} to="/contacts" exact>
-            <MdOutlineContacts style={{ color: "orange", fontSize: "33px", padding: "1rem" }} />
+            <MdOutlineContacts style={{ color: "#9F63FF", fontSize: "33px", padding: "1rem" }} />
           </NavLink>
         </div>
         <div className="animate__animated animate__bounceInLeft">
           <NavLink className={style.link} to="/favoritos" exact>
-            <AiOutlineStar style={{ color: "orange", fontSize: "33px", padding: "1rem" }} />
+            <AiOutlineStar style={{ color: "#9F63FF", fontSize: "33px", padding: "1rem" }} />
           </NavLink>
         </div>
         <div className="animate__animated animate__bounceInLeft">
           <NavLink className={style.link} to="/add-contact" exact>
-            <MdPersonAdd style={{ color: "orange", fontSize: "33px", padding: "1rem" }} />
+            <MdPersonAdd style={{ color: "#9F63FF", fontSize: "33px", padding: "1rem" }} />
           </NavLink>
         </div>
     </footer>

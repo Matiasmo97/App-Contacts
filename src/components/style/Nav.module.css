@@ -3,17 +3,24 @@
   margin-right: auto;
   margin-bottom: 2rem;
   border-radius: 0.3rem;
-  box-shadow: 20px 20px 50px rgba(102, 102, 102, 0.5);
-  background-color: rgb(252, 240, 227);
-}
-.title__link {
+  box-shadow: 20px 20px 50px rgba(39, 39, 39, 0.5);
+  background-color: #3C3C3C;
+  height: 4.6rem;
   display: flex;
-  justify-content: flex-start;
+  justify-content: start;
   align-items: center;
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: orange;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
 }
+.name{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.title__app h3 {
+  color: white;
+  font-size: 25px;
+  margin-left: 0.5rem;
+  font-weight: lighter;
+}
+
+
+
