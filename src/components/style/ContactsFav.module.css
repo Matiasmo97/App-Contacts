@@ -4,19 +4,16 @@
 }
 .containerFavs{
   margin: 1.5rem;
-  border-radius: 18px;
-  box-shadow: 20px 20px 50px rgba(39, 39, 39, 0.5);
-  background-color: #504E4E;
-  color: rgba(255, 255, 255, 0.849);
+  border-radius: var(--boder-radius);
+  box-shadow: var(--box-shadow);
+  background-color: var(--background-color-two);
+  color: var(--color-font);
   width: 360px;
   margin-left: auto;
   margin-right: auto;
   min-height: 400px;
   display: flex;
 }
-/* .contentFavs{
- margin-top: 2rem;
-} */
 .contentFavs li{
   display: flex;
   justify-content: start;
@@ -32,7 +29,7 @@
 }
 .links {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.849);
+  color: var(--color-font);
   list-style: none;
 }
 

@@ -2,11 +2,11 @@
   padding-bottom: 1rem;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 18px;
-  box-shadow: 20px 20px 50px rgba(39, 39, 39, 0.5);
-  background-color: #504E4E;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  background-color: var(--background-color-two);
   max-width: 380px;
-  color: rgba(255, 255, 255, 0.849);
+  color: var(--color-font);
   height: 500px;
 }
 
@@ -16,18 +16,12 @@
   width: 100%;
   height: 6rem;
   border-radius: 18px 18px 0px 0px;
-  /* background: #9F63FF;
-  background: linear-gradient(
-    0deg,
-    rgba(240, 182, 0, 0) 0%,
-    #9F63FF 100%
-  ); */
 }
 .contact_img img{
   top:-50px;
   position:relative;
   margin:auto;
-  background-color: #504E4E;
+  background-color: var(--background-color-two);
   border-radius: 50%;
 }
 .contact__name{
@@ -71,8 +65,8 @@ button {
   cursor: pointer;
   border-radius: 0.3rem;
   font-weight: bold;
-  color: aliceblue;
-  background: #9F63FF;
+  color: var(--color-white);
+  background: var(--primary-color);
   margin: 2rem 1rem 1rem 1rem;
 }
 

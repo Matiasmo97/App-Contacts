@@ -3,11 +3,11 @@
   margin-right: auto;
   margin-bottom: 2rem;
   border-radius: 0.3rem;
-  box-shadow: 20px 20px 50px rgba(39, 39, 39, 0.5);
-  background-color: #3C3C3C;
+  box-shadow: var(--box-shadow);
+  background-color: var(--background);
   height: 4.6rem;
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
 }
 .name{
@@ -16,10 +16,10 @@
   align-items: center;
 }
 .title__app h3 {
-  color: white;
+  color: var(--color-font);
   font-size: 25px;
   margin-left: 0.5rem;
-  font-weight: lighter;
+  font-weight: 400;
 }
 
 
