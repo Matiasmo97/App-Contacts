@@ -19,7 +19,8 @@
     color: transparent;
     background: var(--turquoise);
     margin: 0.5rem;
-    padding: 0.16rem;
+    padding: 0.20rem;
+    width: 3.7rem;
     box-sizing: border-box;
     cursor: pointer;
     user-select: none;
