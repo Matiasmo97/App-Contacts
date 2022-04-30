@@ -14,13 +14,13 @@
   .switch {
     position: relative;
     height: 2rem;
+    width: 3.7rem;
     display: block;
     border-radius: 1rem;
     color: transparent;
     background: var(--turquoise);
     margin: 0.5rem;
     padding: 0.20rem;
-    width: 3.7rem;
     box-sizing: border-box;
     cursor: pointer;
     user-select: none;
