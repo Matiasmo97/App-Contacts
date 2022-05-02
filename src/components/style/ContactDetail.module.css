@@ -2,7 +2,7 @@
   padding-bottom: 1rem;
   margin-left: auto;
   margin-right: auto;
-  border-radius: var(--border-radius);
+  border-radius: var(--boder-radius);
   box-shadow: var(--box-shadow);
   background-color: var(--background-color-two);
   max-width: 380px;
